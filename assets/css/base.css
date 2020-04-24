@@ -1,0 +1,21 @@
+html {
+    font-size: 12pt;
+    font-family: Avenir, Lato, 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.45;
+    color: #000;
+}
+
+body {
+    color: #000;
+}
+
+a {
+    color: inherit;
+}
+
+p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
+    hyphens: auto;
+}

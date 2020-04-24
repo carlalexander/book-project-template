@@ -1,0 +1,74 @@
+.contents {
+    page: contents;
+    page-break-after: always;
+}
+
+.contents h1 {
+    margin-bottom: 3em;
+}
+
+.contents .separator {
+    font-size: 20pt;
+    text-align: center;
+    transform: rotate(80deg);
+}
+
+.contents a {
+    font-size: 11pt;
+}
+
+.contents > ul {
+    margin: 10px 0;
+    line-height: 2;
+}
+
+.contents ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.contents > ul > li > a {
+    font-weight: bold;
+}
+
+.contents > .separator + ul > li:first-of-type a {
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    font-size: 10pt;
+}
+
+.contents li {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.contents li li {
+    margin-left: 2em;
+    padding-left: 0;
+}
+
+.contents a {
+    text-decoration: none;
+}
+
+.contents > ul:first-of-type > li > a,
+.contents > ul:first-of-type > li li > a {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.contents > ul:first-of-type > li li > a {
+    display: none;
+}
+
+.contents > ul:first-of-type > li > a::after,
+.contents > ul:first-of-type > li li a::after {
+    content: leader(' ') " " target-counter(attr(href), page, lower-roman);
+}
+
+.contents > ul > li > a::after,
+.contents > ul > li li a::after {
+    content: leader(' ') " " target-counter(attr(href), page);
+    letter-spacing: normal;
+    font-size: 11pt;
+}

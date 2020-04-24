@@ -1,0 +1,38 @@
+
+body {
+    text-align: justify;
+    font-family: Avenir, Lato, 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.7em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
+code, pre {
+    font-family: Menlo, Consolas, 'Liberation Mono', Courier, monospace;
+}
+
+code {
+    font-size: 0.8em;
+}
+
+pre {
+    /* Don't make it too dark or it will be harder to read on e-ink devices */
+    background-color: #f5f7f8;
+    border-radius: 3px;
+    font-size: 0.5em;
+    padding: 10px;
+    text-align: left;
+    /* Wrap the text of pre sections */
+    white-space: pre-wrap;
+}
+
+p > code,
+li > code {
+    background: #f5f7f8;
+    border: solid 1px #e4e4e4;
+    border-radius: 3px;
+    padding: 0 4px;
+    word-wrap: break-word;
+}

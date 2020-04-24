@@ -1,0 +1,16 @@
+.body img {
+    width: 100%;
+}
+
+.body figure {
+    margin: 0 2em;
+}
+
+.body figcaption {
+    font-size: 9pt;
+    font-style: italic;
+}
+
+.nowrap {
+    white-space: nowrap;
+}

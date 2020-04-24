@@ -1,0 +1,36 @@
+ol { list-style-type: decimal; }
+ul { list-style-type: square; }
+
+ol, ul {
+  margin-left: 3em;
+  padding-left: 0;
+  page-break-before: avoid;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-left: 2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol > li > p + ul,
+ol > li > p + ol,
+ul > li > p + ul,
+ul > li > p + ol {
+  /*
+   * Simulate space after list item so nested lists
+   * aren't butted right up against the preceding
+   * paragraph tag.
+   */
+  margin-top: 0.5em;
+}

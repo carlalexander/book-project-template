@@ -1,0 +1,43 @@
+@page cover {
+    margin: 0;
+    background: url("../images/escheresque_ste.png");
+}
+
+.book-cover {
+    page: cover;
+    width: 100%;
+    height: 100%;
+    counter-reset: page 0;
+}
+
+.book-cover h1,
+.book-cover h2,
+.book-cover h3 {
+    color: white;
+    padding: 0 18%;
+}
+
+.book-cover h1 {
+    font-size: 40pt;
+    margin-top: 4.5em;
+    margin-bottom: 0;
+}
+
+.book-cover h2 {
+    font-size: 32pt;
+    font-weight: normal;
+    margin-top: 0.65em;
+}
+
+.book-cover h3 {
+    font-size: 24pt;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 5.5em;
+    margin-bottom: 0;
+}
+
+span.wordpress {
+    font-family: MrsEaves;
+    font-variant: small-caps;
+}

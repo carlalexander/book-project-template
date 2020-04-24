@@ -1,0 +1,48 @@
+.code-sample, pre {
+    /*page-break-inside: auto;*/
+    /*page-break-inside: avoid;*/
+}
+
+p > code,
+li > code {
+    background: #f5f7f8;
+    border: solid 1px #e4e4e4;
+    border-radius: 3px;
+    padding: 0 4px;
+    word-wrap: break-word;
+}
+
+code {
+    display: inline-block;
+    font-size: 10pt;
+}
+
+pre, pre code, code {
+    font-family: Menlo, Consolas, 'Liberation Mono', Courier, monospace;
+}
+
+pre > code {
+    background-color: #fff;
+    padding: 0 !important;
+    font-size: 6pt;
+}
+
+pre {
+    margin-top: 1em;
+    margin-bottom: 3em;
+    padding-left: 1em;
+    overflow: hidden;
+    border-left: 5pt solid #f1f1f1;
+}
+
+.code-muted + pre {
+    margin-top: -3em;
+}
+
+.code-muted .hljs {
+    color: #ccc;
+}
+
+pre + .code-muted {
+    margin-top: -3em;
+}

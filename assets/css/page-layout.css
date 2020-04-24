@@ -1,0 +1,95 @@
+@media screen {
+  .container {
+    height: 9in;
+    width: 7in;
+    margin: 1in 1in;
+  }
+}
+
+@page {
+  @top {
+    content: string(chapter-title);
+    font-size: 11pt;
+  }
+  @bottom {
+    content: counter(page);
+    font-size: 11pt;
+  }
+
+  size: 7in 9in;
+  margin: 1in 1in;
+
+  font-size: 8pt;
+  font-family: Avenir, Lato, 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+@page:first {
+  @top-center { content: normal; }
+}
+
+@page contents {
+  @bottom { content: counter(page, lower-roman) }
+}
+
+@page blank {
+  @top { content: normal; }
+  @bottom { content: normal; }
+}
+
+@page preface {
+  @bottom { content: counter(page, lower-roman) }
+}
+
+@page newchapter {
+  @top-left { content: normal; }
+  @top-right { content: normal; }
+}
+
+h1 {
+  prince-page-group: start;
+}
+
+.chapter {
+  page: newchapter;
+}
+
+title {
+  string-set: book-title content();
+}
+
+h1 {
+  string-set: chapter-title content();
+}
+
+h2 {
+  string-set: section-title content();
+}
+
+h1 {
+  counter-increment: part;
+  counter-reset: chapter;
+  counter-reset: section;
+}
+
+h2 {
+  counter-increment: chapter;
+  counter-reset: section;
+}
+
+h3 {
+  counter-increment: section;
+}
+
+.blank {
+  page: blank;
+  page-break-after: always;
+}
+
+.preface {
+  page: preface;
+}
+
+.body {
+  counter-reset: page 1;
+}

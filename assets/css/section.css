@@ -1,0 +1,17 @@
+.section > h1:first-child {
+    font-size: 40pt;
+    page-break-after: always;
+}
+
+.section1 > h1:first-child,
+.section2 > h1:first-child {
+    margin-top: 6em;
+}
+
+.section3 > h1:first-child {
+    margin-top: 6.5em;
+}
+
+.section4 > h1:first-child {
+    margin-top: 7em;
+}

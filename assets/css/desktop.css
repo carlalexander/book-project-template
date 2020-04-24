@@ -1,0 +1,47 @@
+@media screen {
+    html, body {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+
+    .book-cover {
+        display: none;
+    }
+
+    .book {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .toc {
+        width: 32ch;
+        padding: 2em 4em;
+        overflow: scroll;
+        order: 2;
+    }
+
+    .preface, .body {
+        padding: 0 2em;
+        flex: 1;
+        order: 1;
+        overflow: scroll;
+    }
+
+    .content {
+        max-width: 65ch;
+    }
+}
+
+@media (max-width: 970px) {
+    .toc { display: none; }
+}
