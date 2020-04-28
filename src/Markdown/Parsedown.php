@@ -14,7 +14,7 @@ namespace App\Markdown;
 use Parsedown as BaseParsedown;
 
 /**
- * Exetended Parsedown class.
+ * Extended Parsedown class.
  *
  * Required to add ability to add IDs to section headings.
  *
