@@ -5,7 +5,7 @@ _[Discover object-oriented programming using WordPress][1]_. For more a more det
 writeup of how the code works, please read the companion article [here][2]. You can
 also leave your questions there.
 
-_Note: This is code is available as a base for your own book project. I'm no longer
+_Note: This code is available as a base for your own book project. I'm no longer
 doing any development on it._
 
 ## Requirements
