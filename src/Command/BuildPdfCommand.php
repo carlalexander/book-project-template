@@ -58,7 +58,7 @@ class BuildPdfCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $princeFile = 'output.pdf';
         $samples = [
@@ -87,12 +87,14 @@ class BuildPdfCommand extends Command
             'section4' => $section4,
         ]));
 
-        $process = new Process("prince output.html --javascript -o $princeFile");
-        $process->run();
+        $process = new Process(['prince', 'output.html', '--javascript', '-o', $princeFile]);
+        $result = $process->run();
 
         foreach ($samples as $sampleFile => $samplePages) {
             $this->createPdf($princeFile, $sampleFile, $samplePages);
         }
+
+        return $result;
     }
 
     private function createPdf($sourceFile, $outputFile, array $pages)

@@ -35,24 +35,27 @@ class BuildMobileCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $command = 'pandoc -f markdown+smart'
-                 . ' -o book-title.epub'
-//                 . ' --epub-cover-image=assets/images/cover.jpg'
-//                 . ' --epub-embed-font=/System/Library/Fonts/Avenir.ttc'
-//                 . ' --epub-embed-font=/System/Library/Fonts/Menlo.ttc'
-                 . ' --css=assets/css/epub.css'
-                 . ' -M author="[Author]"'
-                 . ' -M title="[Book Title]"';
+        $command = [
+            'pandoc',
+            '-f', 'markdown+smart',
+            '-o', 'book-title.epub',
+            //'--epub-cover-image=assets/images/cover.jpg',
+            //'--epub-embed-font=/System/Library/Fonts/Avenir.ttc',
+            //'--epub-embed-font=/System/Library/Fonts/Menlo.ttc,
+            '--css=assets/css/epub.css',
+            '-M author="[Author]"',
+            '-M title="[Book Title]"'
+        ];
 
         $files = Finder::create()->files()->in('content')->name('*.md')->sortByName();
 
         foreach ($files as $file) {
-            $command .= ' '.$file->getPathName();
+            $command[] = $file->getPathName();
         }
 
         $process = new Process($command);
-        $process->run();
+        return $process->run();
     }
 }
